@@ -83,6 +83,7 @@ namespace GymManager.Repositories
                                     ? String.Empty
                                     : reader["Login"].ToString(),
 
+                                // Review IP: keep such "magic" strings in constants
                                 Password = "********"
                             });
                         }
@@ -111,10 +112,11 @@ namespace GymManager.Repositories
                     var resultValue = command.Parameters.Add("@Id", SqlDbType.Int);
                     resultValue.Direction = ParameterDirection.ReturnValue;
                     command.ExecuteNonQuery();
+                    // Review IP: this aaproach decreases code readability
                     return obj.Id = (int)command.Parameters["@Id"].Value;
                 }
             }
-            
+
         }
         /// <summary>
         /// Set activity account administrator. Default: true.

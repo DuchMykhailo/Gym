@@ -7,6 +7,7 @@ using GymManager.Entities;
 
 namespace GymManager.Repositories
 {
+    // Review IP: interface should be names ad IViewRepository, then the concrete implementation (on sql) will be named SqlViewRepository
     interface ISqlViewRepository
     {
         List<View> SelectView();

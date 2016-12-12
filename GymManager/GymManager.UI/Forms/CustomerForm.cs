@@ -19,6 +19,7 @@ namespace GymManager
             dgvCustomer.DataSource = _customerRepository.SelectAllCustomers();
             dgvCustomer.Refresh();
 
+            // Review IP: dont use "magic" numbers
             for (var i = 8; i < 12; i++)
             {
                 dgvCustomer.Columns[i].Visible = false;
@@ -94,6 +95,7 @@ namespace GymManager
                     clbOperations.SetSelected(3, false);
                     
                     break;
+                    //Review IP: this statement is redundant
                 default: break;
             }
         }

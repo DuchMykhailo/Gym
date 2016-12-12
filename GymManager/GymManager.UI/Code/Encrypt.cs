@@ -1,8 +1,10 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
+//Review IP: namespace should be GymManager.Code
 namespace GymManager
 {
+    //Review IP: the better way is to create ICrypoProvider and Md5Ctypto provider which implemets that interface
     public static class Encrypt
     {
         public static string GetHash(string text)

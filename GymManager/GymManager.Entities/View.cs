@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+// Review IP: remove unused usings, just as you`ve done in other files
 namespace GymManager.Entities
 {
     public class View

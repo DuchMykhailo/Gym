@@ -29,6 +29,7 @@ namespace GymManager
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            // Review IP: consider refactoring this, e.g. excluding cases tot separate methods
             switch (clbOperations.SelectedIndex)
             {
                 case 0:

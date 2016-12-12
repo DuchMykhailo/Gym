@@ -7,6 +7,7 @@ namespace GymManager
 {
     public partial class frmGymManager : Form
     {
+        // Review IP: consider moving this logic into connection string provider
         internal static string connectionString = ConfigurationManager.ConnectionStrings["GymManager"].ConnectionString;
 
         public frmGymManager()
@@ -47,7 +48,7 @@ namespace GymManager
 
         private void btnSendMail_Click(object sender, EventArgs e)
         {
-
+            // Review IP: Exception if i dont select any row
             string mail = dgvGymManager.CurrentRow.Cells[2].Value.ToString();
             string nameSurname = dgvGymManager.CurrentRow.Cells[1].Value.ToString();
             var sendMail = new frmSendMail(mail, nameSurname);

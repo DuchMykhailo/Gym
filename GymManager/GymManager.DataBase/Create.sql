@@ -36,6 +36,7 @@ CREATE TABLE tblCard
 	RegistrationDate DATE NOT NULL,
 	EndDate DATE NOT NULL,
 	IsActive BIT NOT NULL,
+	/* Review IP: MONEY is deprecated consider using NUMERIC(18, 4) which is enough for currency in most cases */
 	Price MONEY NOT NULL,
 	AdminId INT NOT NULL,
 	CONSTRAINT Pk_tblCard_CardNumber PRIMARY KEY(CardNumber),
