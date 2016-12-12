@@ -13,6 +13,7 @@ namespace GymManager
         public frmGymManager()
         {
             InitializeComponent();
+            // Review IP: Dont use concatenation use string.Format of string interpolation (C#6 featsure)
             lblInfo.Text = "Gym Manager customers info. Hello, " + ActiveAdmin.Name + " " + ActiveAdmin.Surname + "!";
         }
 
