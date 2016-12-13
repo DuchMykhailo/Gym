@@ -36,6 +36,7 @@ namespace GymManager
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            // Review IP: would extract it into separate email service
             var client = new SmtpClient("smtp.gmail.com", 587)
             {
                 Credentials = new NetworkCredential("gym.manager.net.2016@gmail.com", "11111111gym"),

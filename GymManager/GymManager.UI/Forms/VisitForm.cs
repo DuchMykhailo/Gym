@@ -14,6 +14,7 @@ namespace GymManager
 {
     public partial class frmVisit : Form
     {
+        // Review IP: it`s not a good approach
         private readonly SqlVisitingRepository _visitingRepository = new SqlVisitingRepository(frmGymManager.connectionString);
         private readonly Visiting _visit = new Visiting();
       
@@ -47,6 +48,7 @@ namespace GymManager
                     clbOperations.SetSelected(1, false);
                     break;
                 case 2:
+                    // Review IP: if i dont select any cell - exception
                     _visit.KeyNumber = Convert.ToInt32(dgvVisits.CurrentCell.Value);
                     dgvVisits.DataSource = _visitingRepository.GetVisitsByKeyNumber(_visit);
                     dgvVisits.Refresh();

@@ -3,8 +3,10 @@ using System.Windows.Forms;
 using GymManager.Entities;
 using GymManager.Repositories;
 
+// Review IP: wrong namespace
 namespace GymManager
 {
+    // Review IP: class naming convention (PascalCase)
     public partial class frmAddAdmin : Form
     {
         public frmAddAdmin()
@@ -17,6 +19,7 @@ namespace GymManager
             dgvAddAdmin.RowCount = 1;
         }
 
+        // Review IP: method naming convention (PascalCase) (without _)
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
